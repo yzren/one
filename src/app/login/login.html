@@ -1,0 +1,40 @@
+<div class="login" ng-controller="LoginController">
+	<div class="panel">
+		<div class="panel-body"  novalidate> 
+			<form class="form-horizontal" name="myForm">
+				<div class="panel-img">
+					<img src="../../assets/images/ren.png" class="img-circle" width="100%">
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">用户名</label>
+					<div class="col-sm-9">
+						<input type="text" placeholder="请输入您的用户名" class="form-control" name="user" ng-model="user" required>
+			            <p class="text-danger" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+			                <span ng-show="myForm.user.$error.required">    用户名是必须的！
+			              </span>
+			            </p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">邮件</label>
+					<div class="col-sm-9">
+						<input type="email" placeholder="请输入您的邮件" class="form-control" name="email" ng-model="email" required>
+           				 <p class="text-danger" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+							<span ng-show="myForm.email.$error.required">		邮箱是必须的！
+							</span>
+							<span ng-show="myForm.email.$error">		非法的邮箱地址！
+							</span>
+						</p>
+					</div>
+				</div>
+		        <div class="form-group">
+		          <label class="col-sm-3"></label>
+		          <div class="col-sm-9">
+		            <button ui-sref="main" ng-disabled="myForm.$invalid || myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid" type="submit" class="btn btn-success">登录</button>
+		            <a class="text-primary new-reg">注册新用户！</a>
+		          </div>
+		        </div>
+			</form>
+		</div>
+	</div>
+</div>
