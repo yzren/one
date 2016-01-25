@@ -36,6 +36,7 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 //login.css
 $w100:100%;
 $h50:50px;
+.bg{background-color:#f6f6f6;}
 html,body,.ng-scope{
 	height:$w100;
 }
@@ -44,12 +45,10 @@ html,body,.ng-scope{
 	height:$w100;
 	background:url(../assets/images/bg.jpg) no-repeat;
 	background-size:$w100;
+	padding-top: $h50*4;
 	.panel{
 		width:30%;
-		position:fixed;
-		top:20%;
-		left:50%;
-		margin-left:-15%;
+		margin: 0 auto;
 		padding:$h50 - 20 15px 0 0;
 		background-color:rgba(255, 255, 255, 0.75);
 		&-img{
@@ -69,11 +68,45 @@ html,body,.ng-scope{
 }
 //main.css
 .main{
-	padding:$h50 + 10 0;
+	padding:$h50+10 0;
 	background: url(../assets/images/main/topBanner.jpg) no-repeat;
 	background-size: $w100;
+	header{
+		text-align: center;
+		color: #fff;
+		margin-bottom: 60px;
+	}
 }
-
+.nav-white{
+	background-color: #fff;
+	border-bottom: 1px solid #EAEAEA;
+	box-shadow: 1px 1px 3px rgba(213, 213, 213, 0.34);	
+	text-align: center;
+	.navbar{
+		margin-bottom: 0;
+		&-nav{
+			float: none;
+		}
+		&-nav >li{
+			display: inline-block;
+			float: none;
+		}
+	}
+	
+}
+@media (max-width: 414px){
+	.login{
+		width: 100%;
+		padding:20% 30px;
+		background-size: cover;
+		.panel{
+			width: 100%;
+		}
+	}
+	.main{
+		background-size: cover;
+	}
+}
 
 
 
